@@ -74,6 +74,8 @@
 
 
 
+  
+
 
   <link rel="alternate" href="/atom.xml" title="Miracle'BLOG" type="application/atom+xml">
 
@@ -82,17 +84,23 @@
 
 
 
-<meta name="description" content="HelloWorld！">
+<meta name="description" content="title:日常无聊总结002-Shiro框架学习  ============================================== 日常无聊总结002-Shiro框架学习1.基础学习三个核心组件：Subject, SecurityManager 和 Realms. Subject：即“当前操作用户”。但是，在Shiro中，Subject这一概念并不仅仅指人，也可以是第三方进程、后">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2019/07/18/HolleWorld/index.html">
+<meta property="og:title" content="Miracle&#39;BLOG">
+<meta property="og:url" content="http://yoursite.com/2019/08/02/shiro框架学习/index.html">
 <meta property="og:site_name" content="Miracle&#39;BLOG">
-<meta property="og:description" content="HelloWorld！">
+<meta property="og:description" content="title:日常无聊总结002-Shiro框架学习  ============================================== 日常无聊总结002-Shiro框架学习1.基础学习三个核心组件：Subject, SecurityManager 和 Realms. Subject：即“当前操作用户”。但是，在Shiro中，Subject这一概念并不仅仅指人，也可以是第三方进程、后">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-07-18T07:02:00.623Z">
+<meta property="og:image" content="c:%5CUsers%5CDELL%5CDesktop%5Caaa.png">
+<meta property="og:image" content="c:%5CUsers%5CDELL%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1564745839650.png">
+<meta property="og:image" content="c:%5CUsers%5CDELL%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1564745824581.png">
+<meta property="og:image" content="c:%5CUsers%5CDELL%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1564746229107.png">
+<meta property="og:image" content="c:%5CUsers%5CDELL%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1564746363122.png">
+<meta property="og:updated_time" content="2019-08-02T11:56:07.992Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="HelloWorld！">
+<meta name="twitter:title" content="Miracle&#39;BLOG">
+<meta name="twitter:description" content="title:日常无聊总结002-Shiro框架学习  ============================================== 日常无聊总结002-Shiro框架学习1.基础学习三个核心组件：Subject, SecurityManager 和 Realms. Subject：即“当前操作用户”。但是，在Shiro中，Subject这一概念并不仅仅指人，也可以是第三方进程、后">
+<meta name="twitter:image" content="c:%5CUsers%5CDELL%5CDesktop%5Caaa.png">
 
 
 
@@ -122,13 +130,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/07/18/HolleWorld/">
+  <link rel="canonical" href="http://yoursite.com/2019/08/02/shiro框架学习/">
 
 
 
 
 
-  <title>Hello World | Miracle'BLOG</title>
+  <title> | Miracle'BLOG</title>
   
 
 
@@ -225,7 +233,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/18/HolleWorld/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/02/shiro框架学习/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Zhang Qian">
@@ -242,7 +250,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Hello World</h1>
+          <h1 class="post-title" itemprop="name headline"></h1>
         
 
         <div class="post-meta">
@@ -254,8 +262,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-18T14:54:14+08:00">
-                2019-07-18
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-02T09:46:02+08:00">
+                2019-08-02
               </time>
             
 
@@ -292,7 +300,39 @@
       
 
       
-        <h2 id="HelloWorld！"><a href="#HelloWorld！" class="headerlink" title="HelloWorld！"></a>HelloWorld！</h2>
+        <hr>
+<p>title:日常无聊总结002-Shiro框架学习</p>
+<hr>
+<p>==============================================</p>
+<h2 id="日常无聊总结002-Shiro框架学习"><a href="#日常无聊总结002-Shiro框架学习" class="headerlink" title="日常无聊总结002-Shiro框架学习"></a>日常无聊总结002-Shiro框架学习</h2><h6 id="1-基础学习"><a href="#1-基础学习" class="headerlink" title="1.基础学习"></a>1.基础学习</h6><p>三个核心组件：Subject, SecurityManager 和 Realms.</p>
+<p>Subject：即“当前操作用户”。但是，在Shiro中，Subject这一概念并不仅仅指人，也可以是第三方进程、后台帐户（Daemon Account）或其他类似事物。它仅仅意味着“当前跟软件交互的东西”。但考虑到大多数目的和用途，你可以把它认为是Shiro的“用户”概念。<br>　　Subject代表了当前用户的安全操作，SecurityManager则管理所有用户的安全操作。<br>　　SecurityManager：它是Shiro框架的核心，典型的Facade模式，Shiro通过SecurityManager来管理内部组件实例，并通过它来提供安全管理的各种服务。<br>　　Realm： Realm充当了Shiro与应用安全数据间的“桥梁”或者“连接器”。也就是说，当对用户执行认证（登录）和授权（访问控制）验证时，Shiro会从应用配置的Realm中查找用户及其权限信息。</p>
+<p>2.shiro框架运行原理图（来自网络）</p>
+<p><img src="C:%5CUsers%5CDELL%5CDesktop%5Caaa.png" alt="aaa"></p>
+<p>3.shiro框架和sping security框架的比较：</p>
+<p>（1）shiro框架比sc框架用起来更简单灵活，不用依赖于其他框架（例如spring）就可以独立运行。</p>
+<p>（2）srping security 除了不能脱离Spring，shiro的功能它都有。而且Spring Security对Oauth、OpenID也有支持,Shiro则需要自己手动实现。（可以带上srping 看着就很牛X的一个框架）</p>
+<p>（3）shiro可以把权限细化到按钮层面（在数据库存储一个用户的所有权限，包括登录权限、菜单展示权限以及细化到每个按钮的权限）</p>
+<p>【详细使用步骤见大佬CSDN：<a href="https://www.cnblogs.com/jpfss/p/8352031.html" target="_blank" rel="noopener">https://www.cnblogs.com/jpfss/p/8352031.html</a>  】</p>
+<p>===============================================</p>
+<p>4.尽量少用Arrays.asList(“x”,”xx”)方法</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">List&lt;String&gt; list = Arrays.asList(<span class="string">"a"</span>, <span class="string">"b"</span>, <span class="string">"c"</span>);</span><br><span class="line">list.add(<span class="string">"c"</span>);</span><br><span class="line">System.out.println(list.toString());</span><br></pre></td></tr></table></figure>
+
+<p>add，clear，remove的时候会抛出java.lang.UnsupportedOperationException异常，原因如下：</p>
+<p><img src="C:%5CUsers%5CDELL%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1564745839650.png" alt="1564745839650"></p>
+<p>调用asList方法，返回一个ArrayList，但是这个ArrayList不是真的ArrayList，而是Arrays类中的，它自己没有实现add（）、remove（）等方法，继承父类AbstactList中实现的add方法直接抛出了异常，如下图：</p>
+<p><img src="C:%5CUsers%5CDELL%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1564745824581.png" alt="1564745824581"></p>
+<p><img src="C:%5CUsers%5CDELL%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1564746229107.png" alt="1564746229107"></p>
+<p>所以综上所述，尽量不要使用Arrays.asList()方法将数组转化成字符串。</p>
+<p>5.转化成字符串的方法为：</p>
+<p>（1）非要使用Arrays.asList（）的方法，这样可以变成真正的ArrayList</p>
+<p><img src="C:%5CUsers%5CDELL%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1564746363122.png" alt="1564746363122"></p>
+<p>（2）正常循环方法</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//需要转换的数组</span></span><br><span class="line">       String[] arrays = <span class="keyword">new</span> String[]&#123;<span class="string">"aa"</span>,<span class="string">"bb"</span>,<span class="string">"cc"</span>&#125;;</span><br><span class="line">       <span class="comment">//初始化list</span></span><br><span class="line">       List&lt;String&gt; list = <span class="keyword">new</span> ArrayList&lt;String&gt;();</span><br><span class="line">       <span class="comment">//使用for循环转换为list</span></span><br><span class="line">       <span class="keyword">for</span>(String str : arrays)&#123;</span><br><span class="line">           list.add(str);</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="comment">//打印得到的list</span></span><br><span class="line">       System.out.println(list);</span><br></pre></td></tr></table></figure>
+
+<p>===============================================</p>
+<p>个人github：<a href="https://github.com/zhangqian0710?tab=repositories" target="_blank" rel="noopener">https://github.com/zhangqian0710?tab=repositories</a></p>
+<p>个人csdn:<a href="https://mp.csdn.net/mdeditor/96853700#" target="_blank" rel="noopener">https://mp.csdn.net/mdeditor/96853700#</a></p>
+
       
     </div>
     
@@ -316,15 +356,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2019/07/26/企业文化心得体会001/" rel="next" title="企业文化心得体会001">
+                <i class="fa fa-chevron-left"></i> 企业文化心得体会001
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/07/18/Hadoop安装/" rel="prev" title="Hadoop安装">
-                Hadoop安装 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -445,7 +485,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#HelloWorld！"><span class="nav-number">1.</span> <span class="nav-text">HelloWorld！</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#日常无聊总结002-Shiro框架学习"><span class="nav-number">1.</span> <span class="nav-text">日常无聊总结002-Shiro框架学习</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#1-基础学习"><span class="nav-number">1.0.0.0.1.</span> <span class="nav-text">1.基础学习</span></a></li></ol></li></ol></div>
             
 
           </div>
