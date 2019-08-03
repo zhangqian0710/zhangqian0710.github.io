@@ -74,8 +74,6 @@
 
 
 
-  
-
 
   <link rel="alternate" href="/atom.xml" title="Miracle'BLOG" type="application/atom+xml">
 
@@ -84,17 +82,17 @@
 
 
 
-<meta name="description" content="title:日常无聊总结001    Object类的常见方法：1.hashCode（）；  2.equals（）； 1234567Java中equals和==的区别java中的数据类型，可分为两类： （1）基本数据类型，也称原始数据类型。byte,short,char,int,long,float,double,boolean   他们之间的比较，应用双等号（==）,比较的是他们的值。 （2）">
+<meta name="description" content="Object类的常见方法：1.hashCode（）；  2.equals（）； 1234567Java中equals和==的区别java中的数据类型，可分为两类： （1）基本数据类型，也称原始数据类型。byte,short,char,int,long,float,double,boolean   他们之间的比较，应用双等号（==）,比较的是他们的值。 （2）复合数据类型(类)   当他们用（==）">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Miracle&#39;BLOG">
+<meta property="og:title" content="3.日常无聊总结001">
 <meta property="og:url" content="http://yoursite.com/2019/07/22/3.日常无聊总结001/index.html">
 <meta property="og:site_name" content="Miracle&#39;BLOG">
-<meta property="og:description" content="title:日常无聊总结001    Object类的常见方法：1.hashCode（）；  2.equals（）； 1234567Java中equals和==的区别java中的数据类型，可分为两类： （1）基本数据类型，也称原始数据类型。byte,short,char,int,long,float,double,boolean   他们之间的比较，应用双等号（==）,比较的是他们的值。 （2）">
+<meta property="og:description" content="Object类的常见方法：1.hashCode（）；  2.equals（）； 1234567Java中equals和==的区别java中的数据类型，可分为两类： （1）基本数据类型，也称原始数据类型。byte,short,char,int,long,float,double,boolean   他们之间的比较，应用双等号（==）,比较的是他们的值。 （2）复合数据类型(类)   当他们用（==）">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-08-02T12:11:46.614Z">
+<meta property="og:updated_time" content="2019-08-03T00:55:56.735Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Miracle&#39;BLOG">
-<meta name="twitter:description" content="title:日常无聊总结001    Object类的常见方法：1.hashCode（）；  2.equals（）； 1234567Java中equals和==的区别java中的数据类型，可分为两类： （1）基本数据类型，也称原始数据类型。byte,short,char,int,long,float,double,boolean   他们之间的比较，应用双等号（==）,比较的是他们的值。 （2）">
+<meta name="twitter:title" content="3.日常无聊总结001">
+<meta name="twitter:description" content="Object类的常见方法：1.hashCode（）；  2.equals（）； 1234567Java中equals和==的区别java中的数据类型，可分为两类： （1）基本数据类型，也称原始数据类型。byte,short,char,int,long,float,double,boolean   他们之间的比较，应用双等号（==）,比较的是他们的值。 （2）复合数据类型(类)   当他们用（==）">
 
 
 
@@ -130,7 +128,7 @@
 
 
 
-  <title> | Miracle'BLOG</title>
+  <title>3.日常无聊总结001 | Miracle'BLOG</title>
   
 
 
@@ -244,7 +242,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline"></h1>
+          <h1 class="post-title" itemprop="name headline">3.日常无聊总结001</h1>
         
 
         <div class="post-meta">
@@ -294,8 +292,7 @@
       
 
       
-        <hr>
-<h2 id="title-日常无聊总结001"><a href="#title-日常无聊总结001" class="headerlink" title="title:日常无聊总结001    "></a>title:日常无聊总结001    </h2><h3 id="Object类的常见方法："><a href="#Object类的常见方法：" class="headerlink" title="Object类的常见方法："></a>Object类的常见方法：</h3><p>1.hashCode（）； </p>
+        <h3 id="Object类的常见方法："><a href="#Object类的常见方法：" class="headerlink" title="Object类的常见方法："></a>Object类的常见方法：</h3><p>1.hashCode（）； </p>
 <p>2.equals（）；</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Java中equals和==的区别</span><br><span class="line">java中的数据类型，可分为两类： </span><br><span class="line">（1）基本数据类型，也称原始数据类型。byte,short,char,int,long,float,double,boolean </span><br><span class="line">  他们之间的比较，应用双等号（==）,比较的是他们的值。 </span><br><span class="line">（2）复合数据类型(类) </span><br><span class="line">  当他们用（==）进行比较的时候，比较的是他们在内存中的存放地址，所以，除非是同一个new出来的对象，他们的比较后的结果为true，否则比较后结果为false。 JAVA当中所有的类都是继承于Object这个基类的，在Object中的基类中定义了一个equals的方法，这个方法的初始行为是比较对象的内存地 址，但在一些类库当中这个方法被覆盖掉了，如String,Integer,Date在这些类当中equals有其自身的实现，而不再是比较类在堆内存中的存放地址了。</span><br><span class="line">  对于复合数据类型之间进行equals比较，在没有覆写equals方法的情况下，他们之间的比较还是基于他们在内存中的存放位置的地址值的，因为Object的equals方法也是用双等号（==）进行比较的，所以比较后的结果跟双等号（==）的结果相同。</span><br></pre></td></tr></table></figure>
 
@@ -346,8 +343,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/07/18/1.HolleWorld/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2019/07/18/1.HolleWorld/" rel="next" title="1.Hello World">
+                <i class="fa fa-chevron-left"></i> 1.Hello World
               </a>
             
           </div>
@@ -356,8 +353,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/07/26/4.企业文化心得体会001/" rel="prev" title="企业文化心得体会001">
-                企业文化心得体会001 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/07/26/4.企业文化心得体会001/" rel="prev" title="4.企业文化心得体会001">
+                4.企业文化心得体会001 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -479,7 +476,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#title-日常无聊总结001"><span class="nav-number">1.</span> <span class="nav-text">title:日常无聊总结001    </span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Object类的常见方法："><span class="nav-number">1.1.</span> <span class="nav-text">Object类的常见方法：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Mysql常见小问题："><span class="nav-number">1.2.</span> <span class="nav-text">Mysql常见小问题：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#语法糖："><span class="nav-number">1.3.</span> <span class="nav-text">语法糖：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解语法糖："><span class="nav-number">1.4.</span> <span class="nav-text">解语法糖：</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Object类的常见方法："><span class="nav-number">1.</span> <span class="nav-text">Object类的常见方法：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Mysql常见小问题："><span class="nav-number">2.</span> <span class="nav-text">Mysql常见小问题：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#语法糖："><span class="nav-number">3.</span> <span class="nav-text">语法糖：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解语法糖："><span class="nav-number">4.</span> <span class="nav-text">解语法糖：</span></a></li></ol></div>
             
 
           </div>
