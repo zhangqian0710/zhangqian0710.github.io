@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-08-19T07:38:04.747Z</updated>
+  <updated>2019-08-20T08:07:02.740Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>7.无聊写写之java小技巧</title>
+    <link href="http://yoursite.com/2019/08/20/7.%E6%97%A0%E8%81%8A%E5%86%99%E5%86%99%E4%B9%8Bjava%E5%B0%8F%E6%8A%80%E5%B7%A7/"/>
+    <id>http://yoursite.com/2019/08/20/7.无聊写写之java小技巧/</id>
+    <published>2019-08-20T07:54:56.424Z</published>
+    <updated>2019-08-20T08:07:02.740Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="无聊写写之java小技巧"><a href="#无聊写写之java小技巧" class="headerlink" title="无聊写写之java小技巧"></a>无聊写写之java小技巧</h2><h6 id="1-通过java反射获得java某个类中的方法名字："><a href="#1-通过java反射获得java某个类中的方法名字：" class="headerlink" title="1.通过java反射获得java某个类中的方法名字："></a>1.通过java反射获得java某个类中的方法名字：</h6><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Thread.currentThread().getStackTrace()[<span class="number">1</span>].getMethodName();</span><br></pre></td></tr></table></figure><h6 id="2-比较某一天时间和系统当前日期的大小，比系统日期大返回1，否则返回0"><a href="#2-比较某一天时间和系统当前日期的大小，比系统日期大返回1，否则返回0" class="headerlink" title="2.比较某一天时间和系统当前日期的大小，比系统日期大返回1，否则返回0"></a>2.比较某一天时间和系统当前日期的大小，比系统日期大返回1，否则返回0</h6><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">timeIsBig</span><span class="params">(Date time)</span></span>&#123;</span><br><span class="line">       DateFormat df = <span class="keyword">new</span> SimpleDateFormat(<span class="string">"yyyy-MM-dd"</span>);</span><br><span class="line">       String dt1 = df.format(time);</span><br><span class="line">       String dt2 = df.format(<span class="keyword">new</span> Date());</span><br><span class="line">       <span class="keyword">if</span> (dt1.compareTo(dt2) &gt;= <span class="number">0</span>) &#123;</span><br><span class="line">           <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">       &#125;  <span class="keyword">else</span> &#123;</span><br><span class="line">           <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure><h6 id="3-解析IP地址（获取country国家、region地区、province省份、city城市、operator服务商）获得成为一个map"><a href="#3-解析IP地址（获取country国家、region地区、province省份、city城市、operator服务商）获得成为一个map" class="headerlink" title="3.解析IP地址（获取country国家、region地区、province省份、city城市、operator服务商）获得成为一个map"></a>3.解析IP地址（获取country国家、region地区、province省份、city城市、operator服务商）获得成为一个map</h6><p>ip.db下载：<a href="https://github.com/lionsoul2014/ip2region" target="_blank" rel="noopener">https://github.com/lionsoul2014/ip2region</a> （来源网络）</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br></pre></td><td class="code"><pre><span class="line">  <span class="comment">//本地创建ip.db文件，通过FileUtils.copyInputStreamToFile把ip2region.db内容通过流复制</span></span><br><span class="line">        String tmpDir = System.getProperties().getProperty(<span class="string">"java.io.tmpdir"</span>);</span><br><span class="line">        String dbPath = tmpDir + <span class="string">"ip.db"</span>;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            File file = <span class="keyword">new</span> File(dbPath);</span><br><span class="line">            FileUtils.copyInputStreamToFile(IPUtil.class.getClassLoader().getResourceAsStream(<span class="string">"ip2region.db"</span>), file);</span><br><span class="line">            <span class="comment">//查询算法</span></span><br><span class="line">            <span class="keyword">int</span> algorithm = DbSearcher.BTREE_ALGORITHM; <span class="comment">//B-tree</span></span><br><span class="line">            <span class="comment">//DbSearcher.BINARY_ALGORITHM //Binary</span></span><br><span class="line">            <span class="comment">//DbSearcher.MEMORY_ALGORITYM //Memory</span></span><br><span class="line">            DbConfig config = <span class="keyword">new</span> DbConfig();</span><br><span class="line">            DbSearcher searcher = <span class="keyword">new</span> DbSearcher(config, dbPath);</span><br><span class="line"></span><br><span class="line">            <span class="comment">//define the method</span></span><br><span class="line">            Method method = <span class="keyword">null</span>;</span><br><span class="line">            <span class="keyword">switch</span> (algorithm) &#123;</span><br><span class="line">                <span class="keyword">case</span> DbSearcher.BTREE_ALGORITHM:</span><br><span class="line">                    method = searcher.getClass().getMethod(<span class="string">"btreeSearch"</span>, String.class);</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                <span class="keyword">case</span> DbSearcher.BINARY_ALGORITHM:</span><br><span class="line">                    method = searcher.getClass().getMethod(<span class="string">"binarySearch"</span>, String.class);</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                <span class="keyword">case</span> DbSearcher.MEMORY_ALGORITYM:</span><br><span class="line">                    method = searcher.getClass().getMethod(<span class="string">"memorySearch"</span>, String.class);</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            DataBlock dataBlock = <span class="keyword">null</span>;</span><br><span class="line">            <span class="keyword">if</span> (Util.isIpAddress(ip) == <span class="keyword">false</span>) &#123;</span><br><span class="line">                System.out.println(<span class="string">"Error: Invalid ip address"</span>);</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">            dataBlock = (DataBlock) method.invoke(searcher, ip);</span><br><span class="line">            String[] strArray = dataBlock.getRegion().split(<span class="string">"\\|"</span>);</span><br><span class="line">            Map ipAddressData = <span class="keyword">new</span> HashMap();</span><br><span class="line">            <span class="comment">//国家</span></span><br><span class="line">            <span class="keyword">if</span> (<span class="string">"0"</span>.equals(strArray[<span class="number">0</span>])) &#123;</span><br><span class="line">                ipAddressData.put(<span class="string">"country"</span>, <span class="keyword">null</span>);</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span>(<span class="string">"澳门"</span>.equals(strArray[<span class="number">0</span>]) || <span class="string">"香港"</span>.equals(strArray[<span class="number">0</span>]) || <span class="string">"台湾"</span>.equals(strArray[<span class="number">0</span>]))&#123;</span><br><span class="line">                ipAddressData.put(<span class="string">"country"</span>, <span class="string">"中国"</span>);</span><br><span class="line">            &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">                ipAddressData.put(<span class="string">"country"</span>, strArray[<span class="number">0</span>]);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">//地区</span></span><br><span class="line">            <span class="keyword">if</span> (<span class="string">"0"</span>.equals(strArray[<span class="number">1</span>])) &#123;</span><br><span class="line">                ipAddressData.put(<span class="string">"region"</span>, <span class="keyword">null</span>);</span><br><span class="line">            &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">                ipAddressData.put(<span class="string">"region"</span>, strArray[<span class="number">1</span>]);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">//省份</span></span><br><span class="line">            <span class="keyword">if</span> (<span class="string">"0"</span>.equals(strArray[<span class="number">2</span>])) &#123;</span><br><span class="line">                ipAddressData.put(<span class="string">"province"</span>, <span class="keyword">null</span>);</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                ipAddressData.put(<span class="string">"province"</span>, strArray[<span class="number">2</span>]);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">//地市</span></span><br><span class="line">            <span class="keyword">if</span> (<span class="string">"0"</span>.equals(strArray[<span class="number">3</span>])) &#123;</span><br><span class="line">                ipAddressData.put(<span class="string">"city"</span>, <span class="keyword">null</span>);</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                ipAddressData.put(<span class="string">"city"</span>, strArray[<span class="number">3</span>]);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">//运营方</span></span><br><span class="line">            <span class="keyword">if</span> (<span class="string">"0"</span>.equals(strArray[<span class="number">4</span>])) &#123;</span><br><span class="line">                ipAddressData.put(<span class="string">"operator"</span>, <span class="keyword">null</span>);</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                ipAddressData.put(<span class="string">"operator"</span>, strArray[<span class="number">4</span>]);</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">return</span> ipAddressData;</span><br><span class="line"></span><br><span class="line">        &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>===============================================</p><p>个人github：<a href="https://github.com/zhangqian0710?tab=repositories" target="_blank" rel="noopener">https://github.com/zhangqian0710?tab=repositories</a></p><p>个人csdn:<a href="https://mp.csdn.net/mdeditor/96853700#" target="_blank" rel="noopener">https://mp.csdn.net/mdeditor/96853700#</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;无聊写写之java小技巧&quot;&gt;&lt;a href=&quot;#无聊写写之java小技巧&quot; class=&quot;headerlink&quot; title=&quot;无聊写写之java小技巧&quot;&gt;&lt;/a&gt;无聊写写之java小技巧&lt;/h2&gt;&lt;h6 id=&quot;1-通过java反射获得java某个类中的方法名字
+      
+    
+    </summary>
+    
+      <category term="java知识点" scheme="http://yoursite.com/categories/java%E7%9F%A5%E8%AF%86%E7%82%B9/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>6.配置Mysql读写分离方法</title>
@@ -110,6 +133,27 @@
   </entry>
   
   <entry>
+    <title>1.Hello World</title>
+    <link href="http://yoursite.com/2019/07/18/1.HolleWorld/"/>
+    <id>http://yoursite.com/2019/07/18/1.HolleWorld/</id>
+    <published>2019-07-18T06:54:14.428Z</published>
+    <updated>2019-08-03T00:55:12.733Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="HelloWorld！"><a href="#HelloWorld！" class="headerlink" title="HelloWorld！"></a>HelloWorld！</h2>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;HelloWorld！&quot;&gt;&lt;a href=&quot;#HelloWorld！&quot; class=&quot;headerlink&quot; title=&quot;HelloWorld！&quot;&gt;&lt;/a&gt;HelloWorld！&lt;/h2&gt;
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>2.Hadoop安装</title>
     <link href="http://yoursite.com/2019/07/18/2.Hadoop%E5%AE%89%E8%A3%85/"/>
     <id>http://yoursite.com/2019/07/18/2.Hadoop安装/</id>
@@ -130,27 +174,6 @@
     </summary>
     
       <category term="hadoop" scheme="http://yoursite.com/categories/hadoop/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>1.Hello World</title>
-    <link href="http://yoursite.com/2019/07/18/1.HolleWorld/"/>
-    <id>http://yoursite.com/2019/07/18/1.HolleWorld/</id>
-    <published>2019-07-18T06:54:14.428Z</published>
-    <updated>2019-08-03T00:55:12.733Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="HelloWorld！"><a href="#HelloWorld！" class="headerlink" title="HelloWorld！"></a>HelloWorld！</h2>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;HelloWorld！&quot;&gt;&lt;a href=&quot;#HelloWorld！&quot; class=&quot;headerlink&quot; title=&quot;HelloWorld！&quot;&gt;&lt;/a&gt;HelloWorld！&lt;/h2&gt;
-      
-    
-    </summary>
     
     
   </entry>
