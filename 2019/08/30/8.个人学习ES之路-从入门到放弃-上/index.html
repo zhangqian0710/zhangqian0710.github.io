@@ -86,23 +86,21 @@
 
 
 
-<meta name="description" content="日常无聊总结002-Shiro框架学习1.基础学习三个核心组件：Subject, SecurityManager 和 Realms. Subject：即“当前操作用户”。但是，在Shiro中，Subject这一概念并不仅仅指人，也可以是第三方进程、后台帐户（Daemon Account）或其他类似事物。它仅仅意味着“当前跟软件交互的东西”。但考虑到大多数目的和用途，你可以把它认为是Shiro的“用">
+<meta name="description" content="个人学习ES之路-从安装入门到项目之实战window环境入门学习大体分三个阶段：1.了解阶段 2.安装配置单例及集群阶段 3.实战学习阶段 4.总结阶段 一、了解阶段：听说是目前最牛逼的搜索插件 二、安装阶段：1.下载ES（6.4.2）ES官网：https://www.elastic.co/cn/方便下载：链接：https://pan.baidu.com/s/18GpfnqR77_aTFVkiYn">
 <meta property="og:type" content="article">
-<meta property="og:title" content="5.日常无聊总结002">
-<meta property="og:url" content="http://yoursite.com/2019/08/02/5.日常无聊总结002/index.html">
+<meta property="og:title" content="8.个人学习ES之路-从安装入门到项目之实战window环境入门学习">
+<meta property="og:url" content="http://yoursite.com/2019/08/30/8.个人学习ES之路-从入门到放弃-上/index.html">
 <meta property="og:site_name" content="Miracle&#39;BLOG">
-<meta property="og:description" content="日常无聊总结002-Shiro框架学习1.基础学习三个核心组件：Subject, SecurityManager 和 Realms. Subject：即“当前操作用户”。但是，在Shiro中，Subject这一概念并不仅仅指人，也可以是第三方进程、后台帐户（Daemon Account）或其他类似事物。它仅仅意味着“当前跟软件交互的东西”。但考虑到大多数目的和用途，你可以把它认为是Shiro的“用">
+<meta property="og:description" content="个人学习ES之路-从安装入门到项目之实战window环境入门学习大体分三个阶段：1.了解阶段 2.安装配置单例及集群阶段 3.实战学习阶段 4.总结阶段 一、了解阶段：听说是目前最牛逼的搜索插件 二、安装阶段：1.下载ES（6.4.2）ES官网：https://www.elastic.co/cn/方便下载：链接：https://pan.baidu.com/s/18GpfnqR77_aTFVkiYn">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="c:%5CUsers%5CDELL%5CDesktop%5Caaa.png">
-<meta property="og:image" content="c:%5CUsers%5CDELL%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1564745839650.png">
-<meta property="og:image" content="c:%5CUsers%5CDELL%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1564745824581.png">
-<meta property="og:image" content="c:%5CUsers%5CDELL%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1564746229107.png">
-<meta property="og:image" content="c:%5CUsers%5CDELL%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1564746363122.png">
-<meta property="og:updated_time" content="2019-08-19T07:37:53.366Z">
+<meta property="og:image" content="c:%5CUsers%5CDELL%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1567147838715.png">
+<meta property="og:image" content="c:%5CUsers%5CDELL%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1567163570317.png">
+<meta property="og:image" content="c:%5CUsers%5CDELL%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1567167083949.png">
+<meta property="og:updated_time" content="2019-08-30T12:31:36.014Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="5.日常无聊总结002">
-<meta name="twitter:description" content="日常无聊总结002-Shiro框架学习1.基础学习三个核心组件：Subject, SecurityManager 和 Realms. Subject：即“当前操作用户”。但是，在Shiro中，Subject这一概念并不仅仅指人，也可以是第三方进程、后台帐户（Daemon Account）或其他类似事物。它仅仅意味着“当前跟软件交互的东西”。但考虑到大多数目的和用途，你可以把它认为是Shiro的“用">
-<meta name="twitter:image" content="c:%5CUsers%5CDELL%5CDesktop%5Caaa.png">
+<meta name="twitter:title" content="8.个人学习ES之路-从安装入门到项目之实战window环境入门学习">
+<meta name="twitter:description" content="个人学习ES之路-从安装入门到项目之实战window环境入门学习大体分三个阶段：1.了解阶段 2.安装配置单例及集群阶段 3.实战学习阶段 4.总结阶段 一、了解阶段：听说是目前最牛逼的搜索插件 二、安装阶段：1.下载ES（6.4.2）ES官网：https://www.elastic.co/cn/方便下载：链接：https://pan.baidu.com/s/18GpfnqR77_aTFVkiYn">
+<meta name="twitter:image" content="c:%5CUsers%5CDELL%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1567147838715.png">
 
 
 
@@ -132,13 +130,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/08/02/5.日常无聊总结002/">
+  <link rel="canonical" href="http://yoursite.com/2019/08/30/8.个人学习ES之路-从入门到放弃-上/">
 
 
 
 
 
-  <title>5.日常无聊总结002 | Miracle'BLOG</title>
+  <title>8.个人学习ES之路-从安装入门到项目之实战window环境入门学习 | Miracle'BLOG</title>
   
 
 
@@ -287,7 +285,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/02/5.日常无聊总结002/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/30/8.个人学习ES之路-从入门到放弃-上/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Zhang Qian">
@@ -304,7 +302,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">5.日常无聊总结002</h1>
+          <h1 class="post-title" itemprop="name headline">8.个人学习ES之路-从安装入门到项目之实战window环境入门学习</h1>
         
 
         <div class="post-meta">
@@ -316,8 +314,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-02T09:46:02+08:00">
-                2019-08-02
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-30T20:30:10+08:00">
+                2019-08-30
               </time>
             
 
@@ -333,7 +331,7 @@
             
 			
 			&nbsp; | &nbsp;
-			<span id="/2019/08/02/5.日常无聊总结002/" class="leancloud_visitors" data-flag-title="5.日常无聊总结002">
+			<span id="/2019/08/30/8.个人学习ES之路-从入门到放弃-上/" class="leancloud_visitors" data-flag-title="8.个人学习ES之路-从安装入门到项目之实战window环境入门学习">
 					 &nbsp;阅读次数
 					</span>
 			
@@ -345,8 +343,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/知识点总结/" itemprop="url" rel="index">
-                    <span itemprop="name">知识点总结</span>
+                  <a href="/categories/ElasticSearch/" itemprop="url" rel="index">
+                    <span itemprop="name">ElasticSearch</span>
                   </a>
                 </span>
 
@@ -363,8 +361,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2019/08/02/5.日常无聊总结002/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/08/02/5.日常无聊总结002/" itemprop="commentCount"></span>
+                <a href="/2019/08/30/8.个人学习ES之路-从入门到放弃-上/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/08/30/8.个人学习ES之路-从入门到放弃-上/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -372,7 +370,7 @@
 
           
           
-             <span id="/2019/08/02/5.日常无聊总结002/" class="leancloud_visitors" data-flag-title="5.日常无聊总结002">
+             <span id="/2019/08/30/8.个人学习ES之路-从入门到放弃-上/" class="leancloud_visitors" data-flag-title="8.个人学习ES之路-从安装入门到项目之实战window环境入门学习">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -397,7 +395,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                <span title="字数统计">
-				672字
+				1.1k字
 				</span>
               
 
@@ -422,32 +420,85 @@
       
 
       
-        <h2 id="日常无聊总结002-Shiro框架学习"><a href="#日常无聊总结002-Shiro框架学习" class="headerlink" title="日常无聊总结002-Shiro框架学习"></a>日常无聊总结002-Shiro框架学习</h2><h6 id="1-基础学习"><a href="#1-基础学习" class="headerlink" title="1.基础学习"></a>1.基础学习</h6><p>三个核心组件：Subject, SecurityManager 和 Realms.</p>
-<p>Subject：即“当前操作用户”。但是，在Shiro中，Subject这一概念并不仅仅指人，也可以是第三方进程、后台帐户（Daemon Account）或其他类似事物。它仅仅意味着“当前跟软件交互的东西”。但考虑到大多数目的和用途，你可以把它认为是Shiro的“用户”概念。<br>　　Subject代表了当前用户的安全操作，SecurityManager则管理所有用户的安全操作。<br>　　SecurityManager：它是Shiro框架的核心，典型的Facade模式，Shiro通过SecurityManager来管理内部组件实例，并通过它来提供安全管理的各种服务。<br>　　Realm： Realm充当了Shiro与应用安全数据间的“桥梁”或者“连接器”。也就是说，当对用户执行认证（登录）和授权（访问控制）验证时，Shiro会从应用配置的Realm中查找用户及其权限信息。</p>
-<p>2.shiro框架运行原理图（来自网络）</p>
-<p><img src="C:%5CUsers%5CDELL%5CDesktop%5Caaa.png" alt="aaa"></p>
-<p>3.shiro框架和sping security框架的比较：</p>
-<p>（1）shiro框架比sc框架用起来更简单灵活，不用依赖于其他框架（例如spring）就可以独立运行。</p>
-<p>（2）srping security 除了不能脱离Spring，shiro的功能它都有。而且Spring Security对Oauth、OpenID也有支持,Shiro则需要自己手动实现。（可以带上srping 看着就很牛X的一个框架）</p>
-<p>（3）shiro可以把权限细化到按钮层面（在数据库存储一个用户的所有权限，包括登录权限、菜单展示权限以及细化到每个按钮的权限）</p>
-<p>【详细使用步骤见大佬CSDN：<a href="https://www.cnblogs.com/jpfss/p/8352031.html" target="_blank" rel="noopener">https://www.cnblogs.com/jpfss/p/8352031.html</a>  】</p>
-<p>===============================================</p>
-<p>4.尽量少用Arrays.asList(“x”,”xx”)方法</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">List&lt;String&gt; list = Arrays.asList(<span class="string">"a"</span>, <span class="string">"b"</span>, <span class="string">"c"</span>);</span><br><span class="line">list.add(<span class="string">"c"</span>);</span><br><span class="line">System.out.println(list.toString());</span><br></pre></td></tr></table></figure>
+        <h1 id="个人学习ES之路-从安装入门到项目之实战window环境入门学习"><a href="#个人学习ES之路-从安装入门到项目之实战window环境入门学习" class="headerlink" title="个人学习ES之路-从安装入门到项目之实战window环境入门学习"></a>个人学习ES之路-从安装入门到项目之实战window环境入门学习</h1><p><strong>大体分三个阶段：1.了解阶段 2.安装配置单例及集群阶段 3.实战学习阶段 4.总结阶段</strong></p>
+<h2 id="一、了解阶段："><a href="#一、了解阶段：" class="headerlink" title="一、了解阶段："></a>一、了解阶段：</h2><p>听说是目前最牛逼的搜索插件</p>
+<h2 id="二、安装阶段："><a href="#二、安装阶段：" class="headerlink" title="二、安装阶段："></a>二、安装阶段：</h2><h4 id="1-下载ES（6-4-2）"><a href="#1-下载ES（6-4-2）" class="headerlink" title="1.下载ES（6.4.2）"></a>1.下载ES（6.4.2）</h4><p>ES官网：<a href="https://www.elastic.co/cn/" target="_blank" rel="noopener">https://www.elastic.co/cn/</a><br>方便下载：链接：<a href="https://pan.baidu.com/s/18GpfnqR77_aTFVkiYnHyMg" target="_blank" rel="noopener">https://pan.baidu.com/s/18GpfnqR77_aTFVkiYnHyMg</a> 提取码：76yt  </p>
+<h4 id="2-解压缩后进入bin目录，双击elasticsearch-bat"><a href="#2-解压缩后进入bin目录，双击elasticsearch-bat" class="headerlink" title="2.解压缩后进入bin目录，双击elasticsearch.bat"></a>2.解压缩后进入bin目录，双击elasticsearch.bat</h4><p>看到下入红色框，则是单例启动成功，进入 localhost：9200 可以看到返回的json串</p>
+<p><img src="C:%5CUsers%5CDELL%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1567147838715.png" alt="1567147838715"></p>
+<h4 id="3-插件安装Head安装"><a href="#3-插件安装Head安装" class="headerlink" title="3.插件安装Head安装"></a>3.插件安装Head安装</h4><p>github上搜索elasticsearch-head 下载，解压缩后，用cmd界面，进入此目录，执行==npm install==（不支持npm请百度一下）</p>
+<p>此时在elasticsearch-head下输入==npm run start==， 发现localhost：9100 后台界面，然后关闭命令。（相当于关闭head程序）</p>
+<h4 id="4-配置elasticsearch6-4-2-conf-elasticsearch-yml配置文件"><a href="#4-配置elasticsearch6-4-2-conf-elasticsearch-yml配置文件" class="headerlink" title="4.配置elasticsearch6-4-2/conf/elasticsearch.yml配置文件"></a>4.配置elasticsearch6-4-2/conf/elasticsearch.yml配置文件</h4><p>#master的conf配置<br>http.cors.enabled: true<br>http.cors.allow-origin: “*”</p>
+<p>cluster.name: zq<br>node.name: master<br>node.master: true</p>
+<p>network.host: 127.0.0.1</p>
+<p>【到这一步后，再次运行 elasticsearch.bat 程序 和 head目录下 npm run start ，进入9100界面 能看到master已运行】</p>
+<h4 id="5-配置集群："><a href="#5-配置集群：" class="headerlink" title="5.配置集群："></a>5.配置集群：</h4><p>新建两个文件夹 slave1和slave2 ，把最早下载的ES压缩包分别解压缩到这两个文件夹，然后分别修改各自的conf文件（如下）， 然后 分别启动各自es程序，  刷新9100界面可以发现 集群创建完成</p>
+<p>#slave1的conf配置：</p>
+<p>cluster.name: name<br>node.name: slave1</p>
+<p>network.host: 127.0.0.1<br>http.port: 8200</p>
+<p>discovery.zen.ping.unicast.hosts: [“127.0.0.1”]</p>
+<p>#slave2的conf配置：</p>
+<p>cluster.name: name<br>node.name: slave1</p>
+<p>network.host: 127.0.0.1<br>http.port: 8000</p>
+<p>discovery.zen.ping.unicast.hosts: [“127.0.0.1”]</p>
+<h4 id="6-基本知识："><a href="#6-基本知识：" class="headerlink" title="6.基本知识："></a>6.基本知识：</h4><p>索引、类型、文档id  （数据库、table、一行记录）</p>
+<h4 id="7-开始简单操作"><a href="#7-开始简单操作" class="headerlink" title="7.开始简单操作"></a>7.开始简单操作</h4><p>用postman，put方式创建索引时候出现这个错误</p>
+<p> <code>&quot;Rejecting mapping update to [people] as the final mapping would have more than 1 type: [woman, man]&quot;</code></p>
+<p>原因，es6.0版本后 不支持一次性插入多个类型</p>
+<h5 id="（1）创建索引：可以走head界面手动创建，或者走postman发起put请求创建：地址-127-0-0-1-9200-people"><a href="#（1）创建索引：可以走head界面手动创建，或者走postman发起put请求创建：地址-127-0-0-1-9200-people" class="headerlink" title="（1）创建索引：可以走head界面手动创建，或者走postman发起put请求创建：地址==127.0.0.1:9200/people=="></a>（1）创建索引：可以走head界面手动创建，或者走postman发起put请求创建：地址==127.0.0.1:9200/people==</h5><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	<span class="attr">"settings"</span>: &#123;</span><br><span class="line">		<span class="attr">"number_of_shards"</span>: <span class="number">3</span>,</span><br><span class="line">		<span class="attr">"number_of_replicas"</span>: <span class="number">1</span></span><br><span class="line">	&#125;,</span><br><span class="line">	<span class="attr">"mappings"</span>: &#123;</span><br><span class="line">		<span class="attr">"man"</span>: &#123;</span><br><span class="line">			<span class="attr">"properties"</span>: &#123;</span><br><span class="line">				<span class="attr">"name"</span>: &#123;</span><br><span class="line">					<span class="attr">"type"</span>: <span class="string">"text"</span></span><br><span class="line">				&#125;,</span><br><span class="line">				<span class="attr">"country"</span>: &#123;</span><br><span class="line">					<span class="attr">"type"</span>: <span class="string">"keyword"</span></span><br><span class="line">				&#125;,</span><br><span class="line">				<span class="attr">"age"</span>: &#123;</span><br><span class="line">					<span class="attr">"type"</span>: <span class="string">"integer"</span></span><br><span class="line">				&#125;,</span><br><span class="line">				<span class="attr">"date"</span>: &#123;</span><br><span class="line">					<span class="attr">"type"</span>: <span class="string">"date"</span>,</span><br><span class="line">					<span class="attr">"format"</span>: <span class="string">"yyyy-MM-dd HH:mm:ss||yyyy-MM-dd||epoch_millis"</span></span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>add，clear，remove的时候会抛出java.lang.UnsupportedOperationException异常，原因如下：</p>
-<p><img src="C:%5CUsers%5CDELL%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1564745839650.png" alt="1564745839650"></p>
-<p>调用asList方法，返回一个ArrayList，但是这个ArrayList不是真的ArrayList，而是Arrays类中的，它自己没有实现add（）、remove（）等方法，继承父类AbstactList中实现的add方法直接抛出了异常，如下图：</p>
-<p><img src="C:%5CUsers%5CDELL%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1564745824581.png" alt="1564745824581"></p>
-<p><img src="C:%5CUsers%5CDELL%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1564746229107.png" alt="1564746229107"></p>
-<p>所以综上所述，尽量不要使用Arrays.asList()方法将数组转化成字符串。</p>
-<p>5.转化成字符串的方法为：</p>
-<p>（1）非要使用Arrays.asList（）的方法，这样可以变成真正的ArrayList</p>
-<p><img src="C:%5CUsers%5CDELL%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1564746363122.png" alt="1564746363122"></p>
-<p>（2）正常循环方法</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//需要转换的数组</span></span><br><span class="line">       String[] arrays = <span class="keyword">new</span> String[]&#123;<span class="string">"aa"</span>,<span class="string">"bb"</span>,<span class="string">"cc"</span>&#125;;</span><br><span class="line">       <span class="comment">//初始化list</span></span><br><span class="line">       List&lt;String&gt; list = <span class="keyword">new</span> ArrayList&lt;String&gt;();</span><br><span class="line">       <span class="comment">//使用for循环转换为list</span></span><br><span class="line">       <span class="keyword">for</span>(String str : arrays)&#123;</span><br><span class="line">           list.add(str);</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="comment">//打印得到的list</span></span><br><span class="line">       System.out.println(list);</span><br></pre></td></tr></table></figure>
+<h5 id="（2）数据插入"><a href="#（2）数据插入" class="headerlink" title="（2）数据插入"></a>（2）数据插入</h5><p>指定id插入：put请求、 postman地址:127.0.0.1:9200/people/man/1  (索引/类型/id    必须给id)</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">	<span class="attr">"name"</span>: <span class="string">"zq"</span>,</span><br><span class="line">	<span class="attr">"country"</span>: <span class="string">"China"</span>,</span><br><span class="line">	<span class="attr">"age"</span>: <span class="string">" 22"</span>,</span><br><span class="line">	<span class="attr">"date"</span>: <span class="string">"1997-07-10"</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>===============================================</p>
+<p>自定id插入：post请求、 postman地址:127.0.0.1:9200/people/man/  (索引/类型/    可以不指定id)</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">	<span class="attr">"name"</span>: <span class="string">"zqnb"</span>,</span><br><span class="line">	<span class="attr">"country"</span>: <span class="string">"China"</span>,</span><br><span class="line">	<span class="attr">"age"</span>: <span class="string">"18"</span>,</span><br><span class="line">	<span class="attr">"date"</span>: <span class="string">"2019-07-10"</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>效果图：</p>
+<p><img src="C:%5CUsers%5CDELL%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1567163570317.png" alt="1567163570317"></p>
+<h5 id="（3）数据修改"><a href="#（3）数据修改" class="headerlink" title="（3）数据修改"></a>（3）数据修改</h5><p>post请求 ：postman 请求地址为： 127.0.0.1:9200/people/man/id/ ==_update==</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	<span class="attr">"doc"</span>: &#123;</span><br><span class="line">		<span class="attr">"name"</span>: <span class="string">"zq666"</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>==脚本修改方式：== 127.0.0.1:9200/people/man/id/ ==_update==</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	<span class="attr">"script"</span>: &#123;</span><br><span class="line">		<span class="attr">"lang"</span>: <span class="string">"painless"</span>,</span><br><span class="line">		<span class="attr">"inline"</span>: <span class="string">"ctx._source.age += params.age"</span>,</span><br><span class="line">		<span class="attr">"params"</span>: &#123;</span><br><span class="line">			<span class="attr">"age"</span>: <span class="number">100</span></span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="（4）删除"><a href="#（4）删除" class="headerlink" title="（4）删除"></a>（4）删除</h5><p>删除数据：delete 请求    127.0.0.1:9200/people/man/1/</p>
+<p>删除索引： head界面直接操作  或者 127.0.0.1:9200/people</p>
+<h5 id="（5）查询"><a href="#（5）查询" class="headerlink" title="（5）查询"></a>（5）查询</h5><p>简单查询： get请求    127.0.0.1:9200/people/man/id</p>
+<p>条件查询：post请求 127.0.0.1:9200/people/man/id/ _search     【match 匹配】</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	<span class="attr">"query"</span>: &#123;</span><br><span class="line">		<span class="attr">"match_all"</span>: &#123;&#125;</span><br><span class="line">	&#125;,</span><br><span class="line">    <span class="attr">"from"</span>: <span class="number">1</span>,</span><br><span class="line">    <span class="attr">"size"</span>: <span class="number">1</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	<span class="attr">"query"</span>: &#123;</span><br><span class="line">		<span class="attr">"match"</span>: &#123;</span><br><span class="line">            "title": &#123;XXX&#125;</span><br><span class="line">        &#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>需要排序的 字段</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	<span class="attr">"query"</span>: &#123;</span><br><span class="line">		<span class="attr">"match"</span>: &#123;</span><br><span class="line">            "title": &#123;XXX&#125;</span><br><span class="line">        &#125;</span><br><span class="line">	&#125;,</span><br><span class="line">    "sort": &#123;</span><br><span class="line">        &#123;<span class="attr">"publish_date"</span>: &#123;<span class="attr">"order"</span>: <span class="string">"desc"</span>&#125;&#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>聚合查询：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	<span class="attr">"aggs"</span>: &#123;</span><br><span class="line">        <span class="attr">"group_by_word_count"</span>: &#123;</span><br><span class="line">           	<span class="attr">"terms"</span>: &#123;</span><br><span class="line">                <span class="attr">"field"</span>: <span class="string">"word_count"</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="attr">"group_by_publish_date"</span>: &#123;</span><br><span class="line">            <span class="attr">"terms"</span>: &#123;</span><br><span class="line">                <span class="attr">"field"</span>: <span class="string">"publish_date"</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;   </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>最大最小等查询：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	<span class="attr">"aggs"</span>: &#123;</span><br><span class="line">       <span class="attr">"grades_word_count"</span>: &#123;</span><br><span class="line">           <span class="attr">"stats"</span>: &#123;</span><br><span class="line">               <span class="attr">"field"</span>: <span class="string">"word_coun"</span></span><br><span class="line">           &#125;</span><br><span class="line">       &#125;</span><br><span class="line">    &#125;   </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>模糊查询：（match 包含一部分就可以    match_phrase包含整个  multi_match  多个条件模糊查询）</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	<span class="attr">"query"</span>: &#123;</span><br><span class="line">       	<span class="attr">"关键字"</span>: &#123;</span><br><span class="line">            <span class="attr">"author"</span>: <span class="string">"XX"</span></span><br><span class="line">       &#125;</span><br><span class="line">    &#125;   </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>语法查询：包含：   “query”: “XX and XX”           包含多个：    “query”: “（XX and XX） or  XXXX”</p>
+<p>包含多个字段：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	<span class="attr">"query"</span>: &#123;</span><br><span class="line">       	<span class="attr">"query_string"</span>: &#123;</span><br><span class="line">            <span class="attr">"query"</span>: <span class="string">"XX and XX"</span></span><br><span class="line">       &#125;</span><br><span class="line">    &#125;   </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>包含多个字段：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	<span class="attr">"query"</span>: &#123;</span><br><span class="line">       	<span class="attr">"query_string"</span>: &#123;</span><br><span class="line">            <span class="attr">"query"</span>: <span class="string">"XX or XX"</span></span><br><span class="line">            <span class="string">"fields"</span>: [<span class="string">"title, "</span>author<span class="string">"]</span></span><br><span class="line"><span class="string">       &#125;</span></span><br><span class="line"><span class="string">    &#125;   </span></span><br><span class="line"><span class="string">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>具体化查询：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	<span class="attr">"query"</span>: &#123;</span><br><span class="line">       	<span class="attr">"term"</span>: &#123;</span><br><span class="line">          “XX”： “XX”</span><br><span class="line">       &#125;</span><br><span class="line">    &#125;   </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>范围查询： gt lt   大于小于支持 数字 时间 类型、  now关键词代表 今天</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	<span class="attr">"query"</span>: &#123;</span><br><span class="line">       	<span class="attr">"range"</span>: &#123;</span><br><span class="line">          “word_count”： &#123;</span><br><span class="line">            “gte": 100，</span><br><span class="line">            "lte": 200</span><br><span class="line">        &#125;</span><br><span class="line">       &#125;</span><br><span class="line">    &#125;   </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>子条件查询【过滤查询】：filter context  </p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	<span class="attr">"query"</span>: &#123;</span><br><span class="line">       	<span class="attr">"bool"</span>: &#123;</span><br><span class="line">           “filter": &#123;</span><br><span class="line">           		 “term": &#123;</span><br><span class="line">            		"word_count": 100</span><br><span class="line">        		&#125;</span><br><span class="line">        	&#125;</span><br><span class="line">       &#125;</span><br><span class="line">    &#125;   </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>符合条件查询： 固定分数查询：</p>
+<p><img src="C:%5CUsers%5CDELL%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1567167083949.png" alt="1567167083949"></p>
+<hr>
 <p>个人github：<a href="https://github.com/zhangqian0710?tab=repositories" target="_blank" rel="noopener">https://github.com/zhangqian0710?tab=repositories</a></p>
 <p>个人csdn:<a href="https://mp.csdn.net/mdeditor/96853700#" target="_blank" rel="noopener">https://mp.csdn.net/mdeditor/96853700#</a></p>
 
@@ -474,8 +525,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/07/26/4.企业文化心得体会001/" rel="next" title="4.企业文化心得体会001">
-                <i class="fa fa-chevron-left"></i> 4.企业文化心得体会001
+              <a href="/2019/08/20/7.无聊写写之java小技巧/" rel="next" title="7.无聊写写之java小技巧">
+                <i class="fa fa-chevron-left"></i> 7.无聊写写之java小技巧
               </a>
             
           </div>
@@ -483,10 +534,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/08/15/6.配置Mysql读写分离方法/" rel="prev" title="6.配置Mysql读写分离方法">
-                6.配置Mysql读写分离方法 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -652,7 +699,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#日常无聊总结002-Shiro框架学习"><span class="nav-number">1.</span> <span class="nav-text">日常无聊总结002-Shiro框架学习</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#1-基础学习"><span class="nav-number">1.0.0.0.1.</span> <span class="nav-text">1.基础学习</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#个人学习ES之路-从安装入门到项目之实战window环境入门学习"><span class="nav-number">1.</span> <span class="nav-text">个人学习ES之路-从安装入门到项目之实战window环境入门学习</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、了解阶段："><span class="nav-number">1.1.</span> <span class="nav-text">一、了解阶段：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、安装阶段："><span class="nav-number">1.2.</span> <span class="nav-text">二、安装阶段：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-下载ES（6-4-2）"><span class="nav-number">1.2.0.1.</span> <span class="nav-text">1.下载ES（6.4.2）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-解压缩后进入bin目录，双击elasticsearch-bat"><span class="nav-number">1.2.0.2.</span> <span class="nav-text">2.解压缩后进入bin目录，双击elasticsearch.bat</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-插件安装Head安装"><span class="nav-number">1.2.0.3.</span> <span class="nav-text">3.插件安装Head安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-配置elasticsearch6-4-2-conf-elasticsearch-yml配置文件"><span class="nav-number">1.2.0.4.</span> <span class="nav-text">4.配置elasticsearch6-4-2/conf/elasticsearch.yml配置文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-配置集群："><span class="nav-number">1.2.0.5.</span> <span class="nav-text">5.配置集群：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-基本知识："><span class="nav-number">1.2.0.6.</span> <span class="nav-text">6.基本知识：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-开始简单操作"><span class="nav-number">1.2.0.7.</span> <span class="nav-text">7.开始简单操作</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#（1）创建索引：可以走head界面手动创建，或者走postman发起put请求创建：地址-127-0-0-1-9200-people"><span class="nav-number">1.2.0.7.1.</span> <span class="nav-text">（1）创建索引：可以走head界面手动创建，或者走postman发起put请求创建：地址==127.0.0.1:9200/people==</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#（2）数据插入"><span class="nav-number">1.2.0.7.2.</span> <span class="nav-text">（2）数据插入</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#（3）数据修改"><span class="nav-number">1.2.0.7.3.</span> <span class="nav-text">（3）数据修改</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#（4）删除"><span class="nav-number">1.2.0.7.4.</span> <span class="nav-text">（4）删除</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#（5）查询"><span class="nav-number">1.2.0.7.5.</span> <span class="nav-text">（5）查询</span></a></li></ol></li></ol></li></ol></li></ol></div>
             
 
           </div>
