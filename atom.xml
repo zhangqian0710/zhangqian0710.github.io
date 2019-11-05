@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-08-30T12:31:36.014Z</updated>
+  <updated>2019-11-05T06:17:26.947Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>9.Linux下Job项目之定时任务</title>
+    <link href="http://yoursite.com/2019/11/05/9.Linux%E4%B8%8BJob%E9%A1%B9%E7%9B%AE%E4%B9%8B%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1/"/>
+    <id>http://yoursite.com/2019/11/05/9.Linux下Job项目之定时任务/</id>
+    <published>2019-11-05T06:16:46.598Z</published>
+    <updated>2019-11-05T06:17:26.947Z</updated>
+    
+    <content type="html"><![CDATA[<p>​       <img src="C:%5CUsers%5CDELL%5CDesktop%5Clinux.jpg" alt="linux"></p><p>​       平时工作中可能会写很多Job项目，用来处理或者审核头一天公司产品或者后台产生的各种数据，例如活动数据、订单数据等。下面讲介绍如何自己可以用一台服务器来帮助我们在凌晨时分，人不在办公室而可以完成Job项目的启动及保留日志。</p><p>【提前准备】</p><p>1.一台Liunx服务器（本人系统是Contos7）<br>2.一个写好的并打包jar包的java项目： XXX.jar（通常是job项目）<br>【开始定时任务配置】<br>一、定时任务环境准备<br>1.安装crontabs服务<br>    yum install vixie-cron<br>    yum install crontabs<br>2.查看crontab服务（定时任务服务）是否已设置为开机启动，执行命令：<br>    ntsysv<br>3.加入开机自动启动:<br>   chkconfig –level 35 crond on<br>4.也可以用设置开机自动启动crond服务:<br>   chkconfig crond on<br>    （crond是linux下用来周期性的执行某种任务或等待处理某些事件的一个守护进程，与windows下的计划任务类似，当安装完成操作系统后，默认会安装此服务工具，并且会自动启动crond进程，crond进程每分钟会定期检查是否有要执行的任务，如果有要执行的任务，则自动执行该任务。）</p><p>二、设置jar自动执行<br>1.usr/目录下建立dbtodb文件夹，在dbtodb文件夹下新建一个xxx.sh,脚本内容为：</p><p>#!/bin/bash<br>cd /opt/jobs/jobnameXXX/<br>java -jar -Xms1024m -Xmx1536m XXX.jar<br>2.对xxx.sh赋权限，具体操作如下：<br>chmod 777 xxx.sh<br>3.由于Windows于linux编码格式不同，会出现（执行过程中出现/bin/bash^M: 坏的解释器：）需要对.sh进行编码转换<br>    1.  dos2unix dbtodb.sh<br>         dos2unix: converting file dbtodb.sh to UNIX format …<br>    2.   sed -i ‘s/\r$//‘ xxx.sh<br>4.在控制台上输入以下命令<br>crontab -e<br>按i键编辑这个文本文件<br>0 1 * * * /usr/dbtodb/XXX.sh &amp;&gt;/usr/dbtodb/log.txt</p><p>（每天凌晨一点）<br>5.service crond start//启动服务<br>service crond stop//关闭服务<br>service crond restart//重新载入服务<br>service crond status//查看状态</p><p>===============================================</p><p>个人github：<a href="https://github.com/zhangqian0710?tab=repositories" target="_blank" rel="noopener">https://github.com/zhangqian0710?tab=repositories</a></p><p>个人csdn:<a href="https://mp.csdn.net/mdeditor/96853700#" target="_blank" rel="noopener">https://mp.csdn.net/mdeditor/96853700#</a></p><p>个人微信公众号：码不解鞍</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;​       &lt;img src=&quot;C:%5CUsers%5CDELL%5CDesktop%5Clinux.jpg&quot; alt=&quot;linux&quot;&gt;&lt;/p&gt;
+&lt;p&gt;​       平时工作中可能会写很多Job项目，用来处理或者审核头一天公司产品或者后台产生的各种数据，例如活动数据
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>8.个人学习ES之路-从安装入门到项目之实战window环境入门学习</title>
